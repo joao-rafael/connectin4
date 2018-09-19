@@ -2,7 +2,34 @@ h1{
     color: #763a96;
     letter-spacing: -5px;
 }
+.title{
+    display: inline;
+}
 footer{
     background-color: #763a96;
     color: #ffffff;
+    padding: 20px;;
+}
+.board{
+    border: 2px solid black;
+    background-color: #4d61e2;
+    height: 580px;
+    width: 700px;
+    padding: 20px;
+    box-shadow: -5px 2px 30px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+}
+.line{
+    width: 660px;
+    height: 90px;
+    display: block;
+}
+.slot{
+    background-color: #ffffff;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    border: 2px solid black;
+    margin: 10px;
 }
