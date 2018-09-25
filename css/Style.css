@@ -1,6 +1,26 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 50px;
+    background-color: #ffffff;
+    
+}
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
 h1{
+    margin-top: 0;
     color: #763a96;
-    letter-spacing: -5px;
+    letter-spacing: -3px;
+}
+h3{
+    color: #763a96;
+    background-color: #fff;
+    display: inline;
+    padding: 2px;
 }
 .title{
     display: inline;
@@ -9,6 +29,10 @@ footer{
     background-color: #763a96;
     color: #ffffff;
     padding: 20px;;
+}
+.gamepad{
+    margin-left: 10%;
+    margin-bottom: 60px
 }
 .board{
     border: 2px solid black;
@@ -19,17 +43,66 @@ footer{
     box-shadow: -5px 2px 30px rgba(0,0,0,0.5);
     margin-bottom: 50px;
 }
+.col{
+    display: inline-block;
+    width: 60px;
+}
+.logo{
+    margin-left: 10%;
+    margin-right: 5px;
+    font-weight: 900;
+    display: inline;
+}
+nav{
+    display: inline;
+    float: right;
+    margin-right: 10%;
+    margin-top: -50px;
+}
 .line{
     width: 660px;
     height: 90px;
     display: block;
 }
+ul{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline;
+    border-radius: 100px;
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px;
+    background: #763a96;
+    
+}
+li a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.tutorial{
+    background-color: #4237A3;
+    height: 400px;
+    width: 80%;
+    padding-top: 10px;
+    margin: 50px auto auto auto;
+}
+.tutorial h1{
+    color: #ffffff;
+    letter-spacing: normal;
+    margin-left: 10px;
+}
 .slot{
     background-color: #ffffff;
     display: inline-block;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
-    border: 2px solid black;
-    margin: 10px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: inset 10px 8px 48px #ddd;
+    margin: 5px;
 }
