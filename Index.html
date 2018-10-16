@@ -8,91 +8,110 @@
 
     <!-- My personal CSS-->
     <link rel="stylesheet" type="text/css" href="css/Style.css">
-
-    <!-- My JavaScript -->
-    <script language="javascript" src="js/Script.js"></script>
+    
 </head>
 <body>
     <header>
-            <h1><span class="logo">></span>Connectin'4</h1>
+        <section class="header-content">
+            <h1 class="header-title"><span class="logo">></span>Connectin'4</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Tutorial</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Game</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><button id="Tutorial">Tutorial</button></li>
+                    <li><button id="SignIn">Sign in</button></li>
+                    <li><button id="ToGame">Game</button></li>
+                    <li><button id="ToFooter">About</button></li>
                 </ul>
              </nav>
+        </section>
     </header>
     <main>
-        <section class="tutorial">
-            <h1>This is supposed to be a tutorial :) </h1>
-        </section>
+        <div id="modal" class="modal">
+            <section class="tutorial">
+                <div class="tutorial-text">
+                    <span id="close" class="close">&times;</span>
+                    <h2>This is supposed to be a tutorial :) </h2>
+                    <h3>1 - Rules</h3>
+                    <p>Connectin'4 is a online version of the famous game Connect 4. Tha main objectitve of the player must be to connect 4 pieces straight in line. It consists in 2 players(Player vs CPU or Player vs Player) in competition to see who will connect the 4 pieces first, each player plays with pieces whose has different colors. In a future version the players will be capable to choose the color of their pieces. </p>
+                    <h3>3 - Options and preferences</h3>
+                    <p>The player can set preferences like colors of the pieces in the options section - still in development!!!</p>
+                </div>
+            </section>
+        </div>
         <section class="gamepad">
-            <h1>Gamepad</h1>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
+            <h2>Gamepad</h2>
+            <div class="board">
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot selected"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot selected"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                </div>
+                <div class="col" id="01">
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                        <div class="slot"></div>
+                </div>
             </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
-            <div class="col" id="01">
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-                    <div class="slot"></div>
-            </div>
+        </section>
+        <section>
+            <h2>LeaderBoard</h2>
         </section>
     </main>
     <footer>
-        <h3>About:</h3>
-        <p>This project was created by me. It was made with the objective to accomplish the curricular unity of Web 
-            Technologies from the University of Porto.</p>
-        <section class="contact">
-        </section>
+        <div class="footer-content">
+            <h3>About:</h3>
+            <p>This project was created by me. It was made with the objective to accomplish the curricular unity of Web 
+                Technologies from the University of Porto.</p>
+            <section class="contact">
+            </section>
+        </div>
     </footer>
+    <!-- My JavaScript -->
+    <script type="text/javascript" src="js/Script.js">
+    </script>
 </body>
