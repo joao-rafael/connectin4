@@ -11,6 +11,43 @@ body{
     margin: 0px;
     font-family: sans-serif;
 }
+.main-content{
+    display: block;
+    padding-top: 80px;
+    margin: 0 10% 0 10%;
+    height: 600px;
+    border: black 1px solid;
+}
+.bar{
+    display: inline-block;
+    width: 200px;
+    background-color: #0ACC98;
+    height: 40px;
+    padding: 0 0 0 20px;
+    border-radius: 5px;
+}
+.expand-settings{
+    background-color: #1DB284;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+}
+.settings-expanded{
+    margin-top: -5px;
+    padding-top: 20px;
+    background-color: #1DB284;
+    width: 200px;
+    height: 200px;
+    padding: 10px 10px 0 10px;
+}
+.settings-expanded h6{
+    margin: 0;
+    color: #ffffff;
+}
 .header-content{
     width: 80%;
     margin: auto;
@@ -42,10 +79,15 @@ footer{
     width: 80%;
     margin: auto;
 }
+.settings{
+    display: inline-block;
+}
 .gamepad{
-    width: 900px;
+    display: inline;
+    float: right;
+    width: 1000px;
+    height: 500px;
     padding: 20px;
-    margin-top: 100px;
     background-color: #4237A3;
     margin-left: auto;
     margin-right: auto;
