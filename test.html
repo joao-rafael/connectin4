@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script type="text/javascript">
+        window.alert("testing");
+        class Slot{
+            constructor(){
+                const column = col;
+                const deep = position;
+                const slot = document.createElement("div");
+                slot.setAttribute(value, "0");
+                slot.className = "slot";
+            }
+        }
+        class Board{
+            constructor(id){
+                const parent = document.getElementById(id);
+                const board = document.createElement("div");
+                board.className = "board";
+                parent.appendChild(board);
+            }
+
+            putSlots(col, position){
+                let boardVector = Array();
+                let columnVector = Array();
+                console.log("created vectors");
+                for(let count = 0; count < col; count++){
+                    const column = document.createElement("div");
+                    column.className = "col";
+                    for(let countr = 0; countr < position; countr++){
+                        const pos = new Slot(column,position);
+                        columnVector.push(pos);
+                    }
+                    columnVector = [];
+                    boardVector.push(columnVector);
+                }
+            }
+        }
+        window.onload = function(){
+            x = 6;
+            y = 7;
+            const board = new Board("base");
+            board.putSlots(x,y);
+        }
+        /*
+         window.alert("testing");
+        class Slot{
+            constructor(x,y){
+                const slot = document.createElement("div");
+                //slot.setAttribute(value, "0");
+                slot.className = "slot";
+            }
+        }
+        class Board{
+            constructor(id){
+                const parent = document.getElementById(id);
+                const board = document.createElement("div");
+                board.className = "board";
+                parent.appendChild(board);
+                board.setAttribute("id", "board");
+            }
+            putSlots(col, position){
+                let boardVector = Array();
+                let columnVector = Array();
+                console.log("created vectors");
+                let parent = document.getElementById("board");
+                for(let count = 0; count < col; count++){
+                    const column = document.createElement("div");
+                    column.className = "col";
+                    for(let countr = 0; countr < position; countr++){
+                        const pos = new Slot(count,countr);
+                        columnVector.push(pos);
+                    }
+                    columnVector = [];
+                    boardVector.push(columnVector);
+                }
+                parent.appendChild(boardVector);
+            }
+        }
+        window.onload = function(){
+            x = 6;
+            y = 7;
+            const board = new Board("base");
+            console.log("Created board");
+            board.putSlots(6,8);
+        }
+         */
+    </script>
+    <style type="text/css">
+        h1{
+            font-family: arial;
+        }
+        /**Board style**/
+        .board{
+            border: 1px solid #4237A3;
+            width: 500px;
+            height: 500px;
+        }
+        .slot{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            background-color: #766396;
+            display: inline-block;
+        }
+        .col{
+            height: 500px;
+            background-color: #46b235;
+            width: 40px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page made with JavaScript Test pruporses</h1>
+    <div id="base"></div>
+</body>
+</html>

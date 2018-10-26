@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- HTML FILE - Main File of the Project @author: João Rafael - Up201711192 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Connectin'</title>
 
-    <!-- My personal CSS-->
+    <!-- Link to the CSS files-->
     <link rel="stylesheet" type="text/css" href="css/Style.css">
-    
+    <link rel="stylesheet" type="text/css" href="css/FormStyle.css">
+
+    <!--JS files at the end of <body> tag -->
 </head>
 <body>
     <header>
@@ -25,6 +28,18 @@
         </section>
     </header>
     <main>
+        <div class="preStartForm" id="StartForm">
+                <form class="formSimple">
+                    <h1 class="logInTitle"><span class="logo">></span>Connectin'4</h1>
+                    <fieldset class="formSet">
+                        <legend class="formPrimaryText">User Information:</legend>
+                        <input type="text" placeholder="User" class="textBox1" id="Userbox"><br>
+                        <input type="password" placeholder="Pass" class="textBox1" id="UserPass"><br>
+                        <button class="button1" id="LogIn">Log In</button>
+                        <button class="button1" id="signup">Sign Up</button>
+                    </fieldset>
+                </form>
+        </div>
         <div id="modal" class="modal">
             <section class="tutorial">
                 <div class="tutorial-text">
@@ -50,8 +65,7 @@
                     </h6>
                     <select>
                         <option>7x6 Standard</option>
-                        <option>5x4
-                        little</option>
+                        <option>5x4 little</option>
                         <option>8x7 bigger</option>
                     </select>
                     <h6>AI Difficulty level:
@@ -65,11 +79,17 @@
             </section>
             <section class="gamepad">
                 <h2>Gamepad</h2>
-                <div class="board" id="board">
+                <div class="boardSpace" id="baseBoard">
+                    <!--Here is going to be the javascript generated Board-->
                 </div>
             </section>
-            <section>
+            <section class="leaderBoard">
                 <h2>LeaderBoard</h2>
+                <div class="lb-element">
+                </div>
+            </section>
+            <section class="messageLog">
+                <h2>Message Log:</h2>
             </section>
         </div>
     </main>
@@ -82,7 +102,9 @@
             </section>
         </div>
     </footer>
-    <!-- My JavaScript -->
-    <script type="text/javascript" src="js/Script.js">
+    <!-- JavaScript Files -->
+    <script type="text/javascript" src="js/MainScript.js">
+    </script>
+    <script type="text/javascript" src="js/Transitions.js">
     </script>
 </body>
