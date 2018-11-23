@@ -1,0 +1,64 @@
+/*CSS Document - made by
+* João Rafael - up201711192
+* General Information
+    color palette:
+
+*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+div .modal{
+  display: block;
+}
+.tutorialContent{
+  margin: 5% auto 0 auto;
+  width: 500px;
+}
+.tutorialContent h2{
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+}
+.tutorialText{
+  padding: 0px 10px 0 10px;
+  background-color: #F4F4F4;
+}
+.tutorialText h3{
+  margin-top: 0;
+}
+.modalHead{
+  width: 100%;
+  background-color: #7B9DC0;
+}
+.logInContent{
+  margin: 5% auto;
+  background-color: #F4F4F4;
+  width: 400px;
+}
+.formSet{
+  padding: 20px;
+}
+.logInFooter{
+  height: 50px;
+  width:
+}
+.closebttn{
+  color: #FFFFFF;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+.closebttn:hover,
+.closebttn:focus{
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}

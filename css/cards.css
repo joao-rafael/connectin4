@@ -1,0 +1,57 @@
+/*CSS document
+* User, ranking and other cards
+color palette:
+    blue #7B9DC0
+    yellow #EBC476
+    brown #8C807E
+    red #C56767
+    white #F4F4F4
+*/
+.userRegistration{
+  margin: 5% auto;
+  width: 600px;
+  height: 300px;
+  display: block;
+  background-color: #F4F4F4;
+  border: 1px solid black;
+  padding: 0;
+}
+.signupTheme{
+  background-color: #7B9DC0;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  margin: 0;
+  height: 300px;
+}
+.signupTheme img{
+  margin-top: 50px;
+}
+.signupTheme p{
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.registerForm{
+  float: right;
+  padding: 10px;
+  width: 375px;
+}
+.registerForm #registerUser{
+  float: right;
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.registerForm #backBttn{
+  float: left;
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#registerForm{
+  display: none;
+}
+.registerForm p{
+  color: #EBC476;
+  font-weight: bold;
+}

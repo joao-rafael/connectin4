@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Connect4</title>
+        <link rel="stylesheet" href="css/mainStyle.css">
+        <link rel="stylesheet" href="css/cards.css">
+        <link rel="stylesheet" href="css/modalStyle.css">
+    </head>
+    <body>
+        <!-- Transitions of the Page -->
+        <!-- Tutorial Modal -->
+        <div id="tutorialModal" class="modal">
+           <section>
+               <div class="tutorialContent">
+                   <span id="closebttn" class="closebttn">&times;</span>
+                   <div class="modalHead">
+                     <h2>Tutorial</h2>
+                   </div>
+                   <div class="tutorialText">
+                     <h3>1 - Rules</h3>
+                     <p>Connectin'4 is a online version of the famous game Connect 4. Tha main objectitve of the player must be to connect 4 pieces straight in line. It consists in 2 players(Player vs CPU or Player vs Player) in competition to see who will connect the 4 pieces first, each player plays with pieces whose has different colors. In a future version the players will be capable to choose the color of their pieces. </p>
+                     <h3>3 - Options and preferences</h3>
+                     <p>The player can set preferences like colors of the pieces in the options section - still in development!!!</p>
+                  </div>
+               </div>
+           </section>
+        </div>
+        <!--LogIn Modal -->
+        <div id="LogInModal">
+          <div class="modal">
+               <div class="logInContent">
+                 <div class="modalHead">
+                   <h2 class="logInTitle">Connect4</h2>
+                 </div>
+                 <form class="formSimple">
+                     <fieldset class="formSet">
+                         <legend class="formPrimaryText">User Information:</legend>
+                         <input type="text" placeholder="User" class="textBox1" id="Userbox"><br>
+                         <input type="password" placeholder="Pass" class="textBox1" id="UserPass"><br>
+                     </fieldset>
+                     <div class="logInFooter">
+                       <div class="buttonsDiv">
+                         <button type="button" class="FormButton" id="LogInBttn">Log In</button>
+                         <button type="button" class="FormButton" id="SignUP">Sign Up</button>
+                       </div>
+                     </div>
+                 </form>
+              </div>
+          </div>
+        </div>
+        <!--Register form-->
+        <div id="registerForm">
+          <div class="modal">
+            <div class="userRegistration">
+              <div class="signupTheme">
+                <figure>
+                  <img src="img/user.png"
+                  alt="Human silhouette by Gregor Cresnar" width="100px" height="100px">
+                </figure>
+                <p>User register</p>
+              </div>
+              <div class="registerForm">
+                <form>
+                  <p>Fill up with user information</p><br>
+                  <input type="text" placeholder="Create a user name" class="textBox1" id="registerBox"><br>
+                  <input type="password" placeholder="Create a password" class="textBox1" id="registerPassBox"><br>
+                  <input type="password" placeholder="Confirm password" class="textBox1" id="confirmPassBox"><br><br>
+                  <button type="button" class="FormButton" id="backBttn">Back</button>
+                  <button type="button" class="FormButton"
+                  onclick="registerUser()" id="registerUser">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--header-->
+        <header class="head">
+            <section class="content">
+                <div class="logo">
+                    <h1>Connect4</h1>
+                </div>
+                <div class="navigation">
+                    <nav class="navigation">
+                        <ul>
+                          <li><button href="" onclick="transition(1)">Game</button></li>
+                          <li><button href="" onclick="transition(2)">Tutorial</button></li>
+                          <li><button href="" onclick="transition(3)">Exit</button></li>
+                          <li><button href="" onclick="transition(4)">About</button></li>
+                        </ul>
+                    </nav>
+                  </div>
+            </section>
+        </header>
+        <!-- Main Content of The page -->
+        <main>
+            <section class="mainArea">
+                <h2 class="title2">GamePad</h2>
+                <section class="game">
+                    <div id="base">
+                      <div id="preStart" class="preStart">
+                        <div class="preferences" id="settingsBttn">
+                          <figure>
+                            <img src="img/settings.png"
+                            alt="Settings" width="80px" height="80px">
+                          </figure>
+                          <p class="gameIcon">Settings</p>
+                        </div>
+                        <div class="start" id="startBttn">
+                          <figure>
+                            <img src="img/start.png"
+                            alt="The Pulpit Rock" width="80px" height="80px">
+                          </figure>
+                          <p class="gameIcon">Start Game!</p>
+                        </div>
+                      </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="content">
+                <h2>About:</h2>
+                    <div class="info-text">
+                        <p>This project was created by me. It was made with the objective to accomplish the curricular unity of Web
+                Technologies from the University of Porto.</p>
+                        </p>
+                      <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar"
+                        title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                        title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/transitions.js"></script>
+    </body>
+</html>
