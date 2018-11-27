@@ -82,3 +82,14 @@ regBttn.onclick = function registerUser(){
     return;
   }
 }
+
+//Settings
+const settingsBttn = document.getELementById("settingsBttn");
+const card1 = document.getELementById("preStart");
+const card2 = document.getELementById("settingsContent");
+settingsBttn.onclick = function showSettings(){
+  card1.style.display = "none";
+  card2.style.display = "block";
+  const applyBttn = document.getELementById("apply");
+  applyBttn.onclick =
+}
