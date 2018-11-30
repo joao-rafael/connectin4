@@ -60,7 +60,7 @@ register.onclick = function launchform(){
 //REGISTER USER
 //
 const regBttn = document.getElementById("registerUser");
-const backBttn = document.getELementById("backBttn");
+const backBttn = document.getElementById("backBttn");
 regBttn.onclick = function registerUser(){
   console.log("Register function launched");
   let regUser = document.getElementById('registerBox').value;
@@ -82,14 +82,16 @@ regBttn.onclick = function registerUser(){
     return;
   }
 }
+backBttn.onclick = function backtologin(){
+  registerForm.style.display = "none";
+}
 
 //Settings
-const settingsBttn = document.getELementById("settingsBttn");
-const card1 = document.getELementById("preStart");
-const card2 = document.getELementById("settingsContent");
+const settingsBttn = document.getElementById("settingsBttn");
+const card1 = document.getElementById("preStart");
+const card2 = document.getElementById("settingsContent");
 settingsBttn.onclick = function showSettings(){
   card1.style.display = "none";
   card2.style.display = "block";
-  const applyBttn = document.getELementById("apply");
   //applyBttn.onclick =
 }

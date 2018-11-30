@@ -53,25 +53,45 @@ function generateGameMatrix(n,m){
   console.log("Game Matrix Successfully created!");
   return matrix;
 }
-
+function defineCustomSize(){
+  const value = document.getElementById("size");
+  const size = value.value;
+  switch (value) {
+    case 1:
+      n = 6;
+      m = 5;
+      break;
+    case 2:
+      n = 5;
+      m = 4;
+      break;
+    case 3:
+      n = 7;
+      m = 6;
+      break;
+    default:
+  }
+}
 function Fill(id){
   //TODO
 }
-//console.log(generteGameMatrix(n,m));
-function startGame(colst, cels){
-  let gameMatrix = generateGameMatrix(cols, cels);
+function startGame(n,m){
+  consyt
+  let gameMatrix = generateGameMatrix(n, m);
 }
-//const  = document.getElementById("base");
-const preStart = document.getELementById("preStart");
-const startBttn = document.getELementById("startBttn");
-const configBttn = document.getELementById("settingsBttn");
-const configContent = document.getELementById("settingsContent");
+const base = document.getElementById("base");
+const preStart = document.getElementById("preStart");
+const startBttn = document.getElementById("startBttn");
+const applyBttn = document.getElementById("apply");
+const configBttn = document.getElementById("settingsBttn");
+const configContent = document.getElementById("settingsContent");
 const pvpContent = document.getElementById("SelectVS");
-
-/*startBttn.onclick = function showPVP(preStart, pvpContent){
-  preStart.style.display = "none";
+const vsPlayer = document.getElementById("vsPlayer");
+applyBttn.onclick = function showPVP(){
+  defineCustomSize();
+  configContent.style.display = "none";
   pvpContent.style.display = "block";
-}*/
+};
 
 /**
 startBttn.onclick = function startGame("standard"){

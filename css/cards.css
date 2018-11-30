@@ -58,6 +58,7 @@ color palette:
 }
 /*settings of the game*/
 .settingsContent{
+  display: none;
   color: #F4F4F4;
   border: 1px solid black;
   margin: auto;
