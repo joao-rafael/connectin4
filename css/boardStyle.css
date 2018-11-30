@@ -1,0 +1,53 @@
+/*CSS document
+* Board and general Game styling
+color palette:
+    blue #7B9DC0
+    yellow #EBC476
+    brown #8C807E
+    red #C56767
+    white #F4F4F4
+*/
+.board{
+    background-color: #C2C2C2;
+    margin: 0 auto;
+    padding: 20px;
+    display: inline-block;
+}
+.col{
+    border-radius: 10px;
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+}
+.col:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.cell{
+    border: 1px solid black;
+    border-radius: 200px;
+    margin-top: 5px;
+    background-color: #ffffff;
+    height: 50px;
+}
+.cellFilledP1{
+  border: 1px solid black;
+  border-radius: 200px;
+  margin-top: 5px;
+  height: 50px;
+  background-color: #EBC476;
+}
+.cellFilledP2{
+  border: 1px solid black;
+  border-radius: 200px;
+  margin-top: 5px;
+  height: 50px;
+  background-color: #C56767;
+}
+.connected4{
+  border: 1px solid black;
+  border-radius: 200px;
+  height: 50px;
+  margin-top: 5px;
+  background-color: #7B9DC0;
+}

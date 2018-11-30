@@ -30,9 +30,6 @@ body{
     position: absolute;
     bottom: 0;
 }
-.footerContent{
-
-}
 
 .navigation{
     float: right;
@@ -123,6 +120,14 @@ li button:hover {
   box-shadow: 5px 5px 0px #8C807E;
 }
 .preStart{
+  display: block;
+  font-size: 20px;
+  text-align: justify;
+  width: 350px;
+  margin: 0 auto;
+}
+.pvpContent{
+  display: none;
   font-size: 20px;
   text-align: justify;
   width: 350px;

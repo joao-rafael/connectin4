@@ -58,9 +58,9 @@ register.onclick = function launchform(){
 //USER CLASS
 
 //REGISTER USER
-
+//
 const regBttn = document.getElementById("registerUser");
-const backBttn = document.getELementById("backToLogin");
+const backBttn = document.getELementById("backBttn");
 regBttn.onclick = function registerUser(){
   console.log("Register function launched");
   let regUser = document.getElementById('registerBox').value;
@@ -91,5 +91,5 @@ settingsBttn.onclick = function showSettings(){
   card1.style.display = "none";
   card2.style.display = "block";
   const applyBttn = document.getELementById("apply");
-  applyBttn.onclick =
+  //applyBttn.onclick =
 }
