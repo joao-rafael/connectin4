@@ -9,8 +9,8 @@
   m -> number of rows from connect4. Number of elements from each array.
 **/
 console.log("Game JavaScript File loaded!");
-let n = 7;
-let m = 6;
+var n = 7;
+var m = 6;
 function generateGameMatrix(n,m){
   console.log("Initializing game...");
   //Matrix
@@ -19,64 +19,70 @@ function generateGameMatrix(n,m){
   const base = document.getElementById("base");
   const board = document.createElement("div");
   board.setAttribute("id", "board");
-  board.ClassName = "board";
+  board.className = "board";
   base.appendChild(board);
   console.log("Board base created Successfully");
   for(let count = 0; count < n; count++) {
          //logical matrix
          matrix[count] = [];
          console.log("Logical matrix line "+ count + " created");
-
          //visual elements creation - cols
          const col = document.createElement("div");
          col.setAttribute("id", count);
          col.setAttribute("onclick", "'Fill(id)'");
          col.className = "col";
          board.appendChild(col);
-
-
          //fill the cols with cells
          for(let count2 = 0; count2 < m; count2++){
            //put null on the logical matrix
            matrix[count][count2] = null;
            //visual elements creation - cells
+           const cellParent = document.getElementById(count);
            const cel = document.createElement("div");
            let colN = String(count);
            let celN = String(count2);
            let parseID = colN + celN;
            //id format colrow like c=0,r=2 ... 02
            cel.setAttribute("id", parseID);
-           cel.className = "cel";
+           cel.className = "cell";
+           cellParent.appendChild(cel);
          }
   }
   console.log("Board Filled Successfully!!!!");
   console.log("Game Matrix Successfully created!");
   return matrix;
 }
+
 function defineCustomSize(){
   const value = document.getElementById("size");
   const size = value.value;
   switch (value) {
     case 1:
-      n = 6;
-      m = 5;
-      break;
-    case 2:
-      n = 5;
-      m = 4;
-      break;
-    case 3:
+      console.log("pattern value");
       n = 7;
       m = 6;
       break;
+    case 2:
+      console.log("pattern value");
+      n = 6;
+      m = 5;
+      break;
+    case 3:
+      console.log("pattern value");
+      n = 8;
+      m = 7;
+      break;
     default:
+      n = 7;
+      m = 6;
   }
 }
 function Fill(id){
   //TODO
+  let selected = document.getElementById()
 }
 function startGame(n,m){
-  consyt
+  pvpContent.style.display = "none";
   let gameMatrix = generateGameMatrix(n, m);
 }
 const base = document.getElementById("base");
@@ -87,11 +93,12 @@ const configBttn = document.getElementById("settingsBttn");
 const configContent = document.getElementById("settingsContent");
 const pvpContent = document.getElementById("SelectVS");
 const vsPlayer = document.getElementById("vsPlayer");
+
 applyBttn.onclick = function showPVP(){
   defineCustomSize();
   configContent.style.display = "none";
   pvpContent.style.display = "block";
-};
+}
 
 /**
 startBttn.onclick = function startGame("standard"){

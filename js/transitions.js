@@ -3,6 +3,9 @@
 * Made By: João Rafael Silva
 **/
 console.log("Transitions JavaScript File Loaded!");
+
+//URL of the server
+const URL = "http://twserver.alunos.dcc.fc.up.pt:8008/";
 //Functions to switch between contents
 function transition(value){
   switch (value) {

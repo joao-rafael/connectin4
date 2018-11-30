@@ -7,9 +7,14 @@ color palette:
     red #C56767
     white #F4F4F4
 */
+.base{
+  width: 60%;
+  margin: auto;
+}
 .board{
-    background-color: #C2C2C2;
-    margin: 0 auto;
+    background-color: #FCFCFC;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     display: inline-block;
 }
@@ -17,20 +22,24 @@ color palette:
     border-radius: 10px;
     display: inline-block;
     width: 50px;
+    padding: 0px 2px 0px 2px;
     margin: 10px;
 }
 .col:hover{
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 .cell{
-    border: 1px solid black;
+    display: block;
     border-radius: 200px;
+    border: 2px solid #8C807E;
     margin-top: 5px;
     background-color: #ffffff;
     height: 50px;
+    width: 100%;
 }
 .cellFilledP1{
+  display: inline-block;
   border: 1px solid black;
   border-radius: 200px;
   margin-top: 5px;
@@ -50,4 +59,7 @@ color palette:
   height: 50px;
   margin-top: 5px;
   background-color: #7B9DC0;
+}
+.gameFooter{
+  display: none;
 }
