@@ -7,5 +7,3 @@ This repository is for hosting the connect 4 clone game project that is the main
 * make it responsible to user preferencer
 * requests to server
 * answers from server
-
-## Deadline for the second deliver: next monday
