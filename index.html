@@ -62,7 +62,7 @@
                 <p>User register</p>
               </div>
               <div class="registerForm">
-                <form>
+                <form action="http://twserver.alunos.dcc.fc.up.pt:8008/execute method=post" enctype="" >
                   <p>Fill up with user information</p><br>
                   <input type="text" placeholder="Create a user name" class="textBox1" id="registerBox"><br>
                   <input type="password" placeholder="Create a password" class="textBox1" id="registerPassBox"><br>
@@ -151,13 +151,14 @@
                           </figure>
                           <p class="gameIcon">Vs player</p>
                         </div>
+                        <canvas id="mainCanvas" width="300" height="300">
+                        </canvas>
                       </div>
 
                       <div id="gameFooter" class="gameFooter">
                         <h4>Message board:</h4>
                         <div>
-                          <canvas id="canvas" width="300" height="300">
-                          </canvas>
+
                         </div>
                       </div>
                     </div>
@@ -172,11 +173,13 @@
                 Technologies from the University of Porto.</p>
                         </p>
                       <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar"
-                        title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                        title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/"
+                        title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
                         title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             </div>
         </footer>
         <script type="text/javascript" src="js/game.js"></script>
         <script type="text/javascript" src="js/transitions.js"></script>
+        <script type="text/javascript" src="js/credentials.js"></script>
     </body>
 </html>

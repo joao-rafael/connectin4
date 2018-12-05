@@ -4,19 +4,99 @@
   GAME JavaScript
   generate the gameboard, gameloop and manages the game cards
 
-  about N and M:
-  n -> number of cols from connect4. Rows of the gameMatrix
-  m -> number of rows from connect4. Number of elements from each array.
+  cols -> number of cols from connect4.
+  rows -> number of rows from connect4.
 **/
 console.log("Game JavaScript File loaded!");
+const URL = "http://twserver.alunos.dcc.fc.up.pt:8008/";
+let GameID = 20;
+var user = { nick: "bob", pass: "potato"};
+/**
+FETCH FUNCTIONS
+**/
+//join session
+function join(nick, pass, group, size){
+  fetch(URL+"join", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    body: JSON.stringify({"nick": user.name, "pass": user.pass, })
+    }
+  )
+  .then(response=>{
+    //if okay
+    if(response.ok){
+      alert("Wait to the next player");
+      //now enters animation . need to implement
+    }else{
+      alert("Failed to join a session");
+    }
+  })
+  .then(res => res.json())
+}
+//leave
+function leave(game, nick){
+  fetch(URL+"leave", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    body: JSON.stringify({"game": gameID, "nick", user.name})
+    if(response.ok){
+      alert("Exciting the game...");
+      exitgame();
+    }else{//if not okay
+      alert("Failed");
+    }
+  })
+}
+//notify
+function notify(nick, game, column){
+  fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    body: JSON.stringify({"nick": user.name, "game": gameID, "column": secCol})
+    if(response.ok){
+      alert("Notified server!");
+      exitgame();
+    }else{//if not okay
+      alert("Failed);
+    }
+  })
+}
+//ranking
+function ranking(game, nick){
+  fetch(URL+"ranking", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    body: JSON.stringify({"game": gameID, "nick", user.name})
+    if(response.ok){
+      alert("Exciting the game...");
+      exitgame();
+    }else{//if not okay
+      alert("Failed");
+    }
+  })
+}
 var player1;
 var player2;
 var turn;
-function generateGameMatrix(n,m){
+function gameLoop(){
+ //NEEDS TO RE-DO IT, THE OLDER CODE DOES NOT WORK PROPERLY!!
+}
+function Fill(id){
+  let selected = document.getElementById(id);
+  //TODO
+}
+function generateGameMatrix(rows, cols){
   console.log("Initializing game...");
   //Matrix
   let matrix = [];
-  let columnArray = [];
   //visual elements
   const base = document.getElementById("base");
   const board = document.createElement("div");
@@ -24,30 +104,28 @@ function generateGameMatrix(n,m){
   board.className = "board";
   base.appendChild(board);
   console.log("Board base created Successfully");
-  for(let colCount = 0; colCount < m; colCount++){
-    const col = document.createElement("div");
-    col.setAttribute("id", colCount);
-    col.setAttribute("onclick", "'Fill(id)'");
-    col.className = "col";
-    board.appendChild(col);
-    /*if(colCount = n - 1){
-      colCount = n;
-    }*/
-    console.log("column " + colCount + " created");
-    singleColArray = [];
-    columnArray.push(singleColArray);
-  }
-  for(let count = 0; count < m; count++) {
+  for(let count = 0; count < rows; count++) {
          //logical matrix
          matrix[count] = [];
-         console.log("Logical matrix row "+ count + " created");
-         //visual elements creation - col
+         console.log("row "+ count + " created");
          //fill the cols with cells
-         for(let count2 = 0; count2 < n; count2++){
-           //put null on the logical matrix
-           console.log("created " + count2 + " element from " + count + " line");
+         for(let count2 = 0; count2 < cols; count2++){
+           if(count == 0 && count2 == 0){
+             console.log("Create col launched");
+             var colArray = [];
+              //visual elements creation - col
+             for(let countCols = 0; countCols < cols; countCols++){
+               const col = document.createElement("div");
+               //cols ID will be 0, 1, 2 ... cols
+               col.setAttribute("id", countCols);
+               col.setAttribute("onclick", "'Fill(this.id)'");
+               col.className = "col";
+               board.appendChild(col);
+               console.log("col " + col.id + " created");
+               //colArray[countCols] = col.id, cels[]];
+             }
+           }
            matrix[count][count2] = null;
-           //console.log("null attribuition");
            //visual elements creation - cells
            const cellParent = document.getElementById(count2);
            console.log("attatched to col" + count2);
@@ -55,57 +133,45 @@ function generateGameMatrix(n,m){
            let colN = String(count);
            let celN = String(count2);
            let parseID = colN + celN;
-           //id format colrow like c=0,r=2 ... 02
+           //id format colrow like c=0,r=2 => 02
            cel.setAttribute("id", parseID);
            cel.className = "cell";
-           columnArray[count][count2] = cel.id;
            cellParent.appendChild(cel);
          }
-
   }
-  console.log(columnArray);
   console.log(matrix);
   console.log("Board Filled Successfully!!!!");
   console.log("Game Matrix Successfully created!");
-  return [matrix, columnArray];
-}
-
-function defineCustomSize(){
-  console.log("user want to define a custom size");
-  const sizevalue = document.getElementById("size");
-  const size = sizevalue.value;
-  switch (sizevalue) {
-    case 1:
-      console.log("pattern value");
-      n = 7;
-      m = 6;
-      break;
-    case 2:
-      console.log("pattern value");
-      n = 6;
-      m = 5;
-      break;
-    case 3:
-      console.log("pattern value");
-      n = 8;
-      m = 7;
-      break;
-    default:
-      n = 7;
-      m = 6;
-  }
-  return [n,m];
-}
-function Fill(id){
-  //TODO
-  let selected = document.getElementById()
+  return matrix;
 }
 function startGame(){
+  //put the section method here
+  let rows = 6;
+  let cols = 7;
   pvpContent.style.display = "none";
-  var sizeArray = defineCustomSize();
-  var n = sizeArray[0];
-  var m = sizeArray[1];
-  generateGameMatrix(n, m);
+  const sizevalue = document.getElementById("size");
+  const size = sizevalue.value;
+  switch (sizevalue){
+    case 1:
+      console.log("pattern value");
+      rows = 6;
+      cols = 7;
+      break;
+    case 2:
+      console.log("smaller value");
+      rows = 5;
+      cols = 6;
+      break;
+    case 3:
+      console.log("bigger value");
+      rows = 7;
+      cols = 8;
+      break;
+    default:
+      rows = 6;
+      cols = 7;
+  }
+  matrix = generateGameMatrix(rows, cols);
 }
 const base = document.getElementById("base");
 const preStart = document.getElementById("preStart");
