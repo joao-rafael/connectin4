@@ -1,24 +1,26 @@
 /**
 * JavaScript File
+* this is the
 * Made By: João Rafael Silva
 **/
 console.log("Transitions JavaScript File Loaded!");
-const URL = "http://twserver.alunos.dcc.fc.up.pt:8008/";
 let method = "POST";
-var user = { nick: "bob", pass: "potato"};
+var user = { nick: "", pass: ""};
 
 //Functions to switch between contents
 function transition(value){
   switch (value) {
     case 1:
       //TODO
+      console.log("Opening function");
       break;
     case 2:
       console.log("Opening modal for Tutorial");
       openModal();
       break;
     case 3:
-
+      console.log("Exiting... reloading entire page");
+      window.location.reload();
       break;
     case 4:
 
@@ -52,9 +54,7 @@ const logIn = document.getElementById("LogInBttn");
 logIn.onclick = function enter(){
     let regUser = document.getElementById('Userbox').value;
     let regPass = document.getElementById("UserPass").value;
-    user.nick = regUser;
-    user.pass = regPass;
-    register(user.nick, user.pass);
+    register(regUser, regPass);
     startForm.style.display = "none";
 };
 //Changes to the register form
@@ -69,23 +69,23 @@ FETCH FUNCTIONS
 function register(nick, pass){
   fetch(URL+"register", {
     method: "POST",
-    headers: {
+    headers:{
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     },
+    //JSON.stringify - parses the variables to JSON
     body: JSON.stringify({"nick": nick, "pass": pass})
     }
    )
-  .then(response=>{
+  .then(response()=>{
     //if okay
       if(response.ok){
-        alert("Registered with success!");
+        alert("user: " nick + " registered/loged with success!");
       }else{//if not okay
         alert("Failed to register or logIn");
       }
   })
 }
 //REGISTER USER
-var user = { nick: "", pass: ""};
 const regBttn = document.getElementById("registerUser");
 const backBttn = document.getElementById("backBttn");
 regBttn.onclick = function registerUser(){
@@ -101,8 +101,6 @@ regBttn.onclick = function registerUser(){
       return;
     }else if(regPass == confirmPass){
       //register user function
-      user.nick = regUser;
-      user.pass = regPass;
       registerForm.style.display = "none";
       register(regUser, regPass);
     }else if(regPass != confirmPass){
