@@ -67,7 +67,9 @@ signUP.onclick = function launchform(){
 FETCH FUNCTIONS
 **/
 function register(nick, pass){
+  console.log("Initializing fetch");
   fetch(URL+"register", {
+    //URL + register = http://twserver.alunos.dcc.fc.up.pt:8008/register
     method: "POST",
     headers:{
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -76,14 +78,24 @@ function register(nick, pass){
     body: JSON.stringify({"nick": nick, "pass": pass})
     }
    )
-  .then(response()=>{
+  .then(response => {
+    //then(function anonimous(response){
+
+    //})
     //if okay
       if(response.ok){
-        alert("user: " nick + " registered/loged with success!");
+        //response.text().then(console.log);
+        alert("user: " + nick + " registered/loged with success!");
+        return response.json();
       }else{//if not okay
+        console.log("error: " + response.statusText);
         alert("Failed to register or logIn");
       }
   })
+  .then(json => {
+    console.log(JSON.stringify(json));
+  });
+  //.catch()
 }
 //REGISTER USER
 const regBttn = document.getElementById("registerUser");
