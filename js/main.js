@@ -9,7 +9,6 @@
 **/
 console.log("Game JavaScript File loaded!");
 let GameID = 20;
-var user = { nick: "bob", pass: "potato"};
 /**
 FETCH FUNCTIONS
 **/
